@@ -1,0 +1,143 @@
+1
+00:00:10,790 --> 00:00:13,770
+Cuál es la mejor manera de aprender vostra.
+
+2
+00:00:14,010 --> 00:00:18,680
+Pues la respuesta es sencilla no memorice absolutamente nada.
+
+3
+00:00:18,680 --> 00:00:24,350
+Hace poco había llevó un curso sobre cómo mejorar la memoria al Maxie y el instructor comentó lo que
+
+4
+00:00:24,350 --> 00:00:25,340
+me llamó la atención.
+
+5
+00:00:25,400 --> 00:00:32,540
+Cito una frase de Albert Einstein diciendo lo siguiente Por qué memorizar algo que puedo consultar fácilmente
+
+6
+00:00:32,660 --> 00:00:34,590
+en un libro o una agenda.
+
+7
+00:00:34,700 --> 00:00:41,750
+Y recomendaba que mientras más libre tengamos la mente de cosas innecesarias mejor será nuestro aprendizaje.
+
+8
+00:00:41,750 --> 00:00:49,010
+Así que por qué llenarte la cabeza de tantas clases dos bloques de código CSS tantos bloques de código
+
+9
+00:00:49,400 --> 00:00:58,130
+HTML que nosotros podemos encontrar un lugar donde poder consultarlas de una manera sencilla ojo te
+
+10
+00:00:58,160 --> 00:01:04,850
+das cuenta que al hacer esta práctica sin darte cuenta sin darte cuenta poco a poco te vas a ir memorizando
+
+11
+00:01:04,940 --> 00:01:10,910
+esos bloques pero por costumbre de acuerdo es por eso que cuando yo trabajo con Yule como WordPress
+
+12
+00:01:11,120 --> 00:01:16,880
+siempre o cuando diseño plantillas siempre tengo una chuleta en un archivo con todas las funciones que
+
+13
+00:01:16,880 --> 00:01:22,900
+necesito donde simplemente voy a copiar y pegar y los implemento dentro de mi proyecto.
+
+14
+00:01:22,940 --> 00:01:29,110
+Yo estaba desarrollando una chuleta para vostra 4 hasta que pasaron este sitio jaquear TMZ.com.
+
+15
+00:01:29,120 --> 00:01:39,110
+Barra mostraba yo estilo sin que nos ofrece una completa lista de qué cosa de clases y de funciones
+
+16
+00:01:39,140 --> 00:01:44,030
+y componentes listos para usar de acuerdos basados en mostrar cuatro.
+
+17
+00:01:44,030 --> 00:01:48,440
+Obviamente esto va a ir actualizándose a medida que el proyecto vaya madurando.
+
+18
+00:01:48,440 --> 00:01:55,880
+Por ejemplo aquí nos ofrece una completa colección de bloques de componente de estilos de clases para
+
+19
+00:01:55,880 --> 00:02:00,020
+poder implementarlas dentro de nuestros proyectos basados en vostra.
+
+20
+00:02:00,020 --> 00:02:07,370
+Por ejemplo mira si queremos aplicar un botón de estilo secundario muy usado simplemente copiamos bueno
+
+21
+00:02:07,370 --> 00:02:13,130
+aquí tenemos el código que necesitamos y en la parte derecha tenemos lo que vamos a obtener de acuerdo.
+
+22
+00:02:13,130 --> 00:02:19,820
+Por ejemplo si queremos saber un mensaje de alerta de Suzette aquí tenemos el mensaje que vamos a proceder
+
+23
+00:02:20,270 --> 00:02:27,350
+así que esta página por favor recuerda bien esta va a ser nuestra navaja suiza para poder trabajar de
+
+24
+00:02:27,350 --> 00:02:33,760
+una manera sencilla sin ningún tipo de esfuerzo dentro de mostrar no te quiero no quiero que memorice
+
+25
+00:02:33,860 --> 00:02:41,300
+absolutamente nada inclusive Mirá tenemos los estilos para crear pantallas modales los estilos para
+
+26
+00:02:41,300 --> 00:02:47,690
+crear tu ulti los estilos para la tipografía de Word podemos alinear diferentes elementos con diferentes
+
+27
+00:02:47,690 --> 00:02:48,470
+clases.
+
+28
+00:02:48,590 --> 00:02:55,610
+Tenemos las clases que tú necesitas usar para el sistema de columnas los Kaur y un sinfín de elementos
+
+29
+00:02:56,060 --> 00:02:59,880
+que te invito a que te sumerges en esto de acuerdo.
+
+30
+00:02:59,900 --> 00:03:06,920
+Es importante que te familiariza con esta hoja estilo para que puedas trabajar de una manera más cómoda
+
+31
+00:03:07,120 --> 00:03:09,680
+en el desarrollo de tu proyecto con vostra.
+
+32
+00:03:09,740 --> 00:03:14,980
+Por ejemplo mira si queremos averguenza un menú de navegación donde está saber dónde estás dónde estás
+
+33
+00:03:14,980 --> 00:03:15,680
+solo estás.
+
+34
+00:03:15,710 --> 00:03:20,750
+Por ejemplo aquí tenemos una barra de navegación por ejemplo damos clic en la barra tu guiado damos
+
+35
+00:03:20,750 --> 00:03:24,620
+un clic aquí te damos todo el código CSS que necesitamos.
+
+36
+00:03:24,620 --> 00:03:29,360
+Entonces ya estás listo para poder trabajar con vostra en la versión 4.

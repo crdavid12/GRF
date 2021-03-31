@@ -1,1 +1,180 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    background-image: url(../src/assets/images/cinta_fondo.jpg),url(../src/assets/images/Fondo_madera_4a.jpg);
+    height: 20%,10px;
+    background-repeat: no-repeat, repeat repeat;
+    background-position: center, center;
+    background-attachment: fixed, fixed;
+    background-size: contain, contain;
+    width: 100%;
+
+}
+
+.textonavBar{
+  /* width: 100%; */
+  justify-content: center;
+  font-family: cursive;
+  font-style: italic;
+  font-size: 22px;
+  /* color: white; */
+
+}
+
+.colornavbar{
+    background-color: rgb(231, 194, 194, .6);
+}
+
+ul{
+  width: 100%;
+  list-style-type: none;
+  overflow: hidden;
+  justify-content: space-around;
+  border-right: #fff 1px solid;
+}
+
+ul li{
+  width: auto;
+  float: left;
+}
+
+ul li a{
+  /* display: block; */
+  color: #fff;
+}
+
+li a:hover{
+  color: #00E1FF;
+  text-decoration: none;
+}
+
+nav ul li a:focus{
+  color: rgb(210, 198, 30);
+}
+
+
+
+.video-fluid {
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    border: rgb(187, 21, 21) 5px solid;
+    border-radius: 3%;
+  }
+
+.titulos{
+    color: #fff;
+    font-style: italic;
+    text-decoration: underline;
+    font-family: cursive;
+    font-size: 28px;
+    text-align: center;
+    padding: 50px 0 30px 0;
+}
+
+
+
+.textoBiblico{
+    width: 97%;
+    margin: 0 auto 0 auto;
+}
+
+.fuenteCitasBiblicas{
+    color: black;
+    font-size: 1.3em;
+}
+
+.border_ayuda{
+    border-right:#00E1FF solid 1px;
+    padding-right: 10px;
+}
+.border_ayudaIzq{
+  border-left:#00E1FF solid 1px;
+  padding-left: 10px;
+}
+
+.iconWhats{
+    font-size: 2.8em;
+    color: rgb(86, 146, 58);
+}
+
+.iconInstagram{
+    font-size: 2.8em;
+    color: rgb(138, 47, 138);
+}
+
+.iconFace{
+    font-size: 2.8em;
+    color: rgb(38, 74, 143);
+}
+
+.iconYoutube{
+    font-size: 2.8em;
+    color: brown;
+}
+
+.footerSocial{
+  background-color: black;
+  padding-left: 45%;
+}
+
+.footerContact{
+    display: table;
+    margin: auto;
+}
+
+.footerContacText{
+    color: #00E1FF;
+    font-style: italic;
+    font-family: cursive;
+}
+
+.numerosAportes{
+    color: black;
+    font-style: italic;
+    text-decoration: underline;
+    font-family: cursive;
+    font-size: 1.2rem;
+    text-align: center;
+    padding-bottom: 20px;
+    /* padding: 50px 0 30px 0; */
+}
+
+.fechaModal{
+    padding-top: 2%;
+    font-family: cursive;
+    font-style: italic;
+    color: #fff !important;
+    text-align: center;
+}
+
+.fijarContenido{
+    height: calc(100vh - 253px);
+
+    /* background-color: blueviolet; */
+}
+
+.homeAdmin{
+    height: 50vh;
+    background-color: rgba(0, 0, 0, 0.555);
+    color: rgb(199, 13, 13);
+    font-family: cursive;
+    font-style: italic;
+    font-size: 3em;
+    text-decoration: underline;
+}
+
+/* Formularios */
+.titulosForm{
+    color: #fff;
+    font-style: italic;
+    font-family: cursive;
+    font-size: 28px;
+    text-align: center;
+}
+
+.cajaForm{
+    /* background-color: rgb(54, 50, 50); */
+    background-color: black;
+    padding-top: 20px;
+    margin: 30px 0 30px 0;
+    border: 1px solid cornflowerblue ;
+}

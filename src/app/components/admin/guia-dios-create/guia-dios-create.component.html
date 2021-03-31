@@ -1,0 +1,56 @@
+<div class="container mt-4">
+  <div class="row cajaForm">
+
+      <div class="col-4">
+          <form>
+              <div class="form-group align-items-center align-content-center">
+                  <label for="" class="titulosForm col-12">Url Video Guia de Dios</label>
+              </div>
+          </form>
+      </div>
+      <div class="col-8">
+          <div>
+              <input type="text" class="form-control" name="" id="urlGuiaDios">
+          </div>
+      </div>
+
+      <div class="col-4">
+          <form>
+              <div class="form-group align-items-center align-content-center">
+                  <label for="" class="titulosForm col-12">Titulo Guia de Dios</label>
+              </div>
+          </form>
+      </div>
+      <div class="col-8">
+          <div>
+              <input type="text" class="form-control" name="" id="tituloGuiaDios">
+          </div>
+      </div>
+
+      <div class="col-4">
+          <form>
+              <div class="form-group align-items-center align-content-center">
+                  <label for="" class="titulosForm col-12">Descripcion Guia de Dios</label>
+              </div>
+          </form>
+      </div>
+      <div class="col-8">
+          <div>
+              <textarea class="form-control" id="DescripcionGuiaDios" rows="6"></textarea>
+            </div>
+      </div>
+
+      <div class="row" style="margin: 20px;">
+          <div class="col ml-4">
+              <button type="button" class="btn btn-success" (click)="postGuiaDios()">GUARDAR</button>
+          </div>
+
+
+            <div class="col ml-4">
+                <button type="button" class="btn btn-success" [routerLink]="['/guiaDios-admin']">Volver</button>
+            </div>
+
+      </div>
+
+  </div>
+</div>

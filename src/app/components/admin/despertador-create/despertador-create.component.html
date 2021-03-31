@@ -1,0 +1,31 @@
+<div class="container mt-4">
+  <div class="row cajaForm">
+
+      <div class="col-4">
+          <form>
+              <div class="form-group align-items-center align-content-center">
+                  <label for="" class="titulosForm col-12">Url Video Guia de Dios</label>
+              </div>
+          </form>
+      </div>
+      <div class="col-8">
+          <div>
+              <input type="text" class="form-control" name="" id="urlDespertador">
+          </div>
+      </div>
+
+      <div class="row" style="margin: 20px;">
+          <div class="col ml-4">
+              <button type="button" class="btn btn-success" (click)="postDespertador()">GUARDAR</button>
+          </div>
+
+
+            <div class="col ml-4">
+                <button type="button" class="btn btn-success" [routerLink]="['/despertador-admin']">Volver</button>
+            </div>
+
+      </div>
+
+  </div>
+</div>
+

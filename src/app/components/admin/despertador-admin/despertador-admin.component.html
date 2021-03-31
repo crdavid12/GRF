@@ -1,0 +1,45 @@
+<div class="container mt-4">
+
+  <div class="row">
+    <div class="col-4 pb-3" *ngFor="let item of resultadoPeticion">
+      <!-- <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="asada"
+        [checked]="item.publicacion" [disabled]="!item.publicacion">
+        <label class="form-check-label" for="flexRadioDefault1">
+          <p>{{item.momento}}</p>
+        </label>
+      </div> -->
+      <div class="text-center text-white">
+        <p>{{item.momento}}</p>
+      </div>
+      <div class="card" style="width: 18rem; "  >
+        <div class="embed-responsive embed-responsive-16by9 col-12">
+          <iframe class="embed-responsive-item" [src]="this.dom.bypassSecurityTrustResourceUrl(item.imagen)" allowfullscreen></iframe>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{item.titulo}}</h5>
+          <p class="card-text">{{item.descripcion}}</p>
+          <hr>
+          <div class="row d-flex justify-content-center">
+            <div class="col-6 d-flex justify-content-center">
+              <i class="fas fa-pen-alt" (click)="modificar(item._id)"></i>
+            </div>
+            <!-- <div class="col-6 d-flex justify-content-center">
+              <i class="fas fa-trash-alt"  ></i>
+            </div> -->
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="row" style="margin: 20px;">
+      <div class="col ml-4">
+          <button type="button" class="btn btn-success" (click)="createDespertador()">Crear</button>
+      </div>
+  </div>
+</div>

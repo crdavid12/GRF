@@ -1,0 +1,257 @@
+<div class="container mt-4">
+    <!-- Video Pagina Principal -->
+    <div class="row cajaForm">
+        <div class="col-4">
+            <form>
+                <div class="form-group ">
+                    <label for="" class="titulosForm col-12">URL Video Principal</label>
+                </div>
+            </form>
+        </div>
+        <div class="col-6">
+          <div>
+            <input type="text" class="form-control" name="" id="urlVideoPrincipal">
+          </div>
+        </div>
+
+        <div class="row" style="margin: 20px;">
+            <div class="col ml-4">
+                <button type="button" class="btn btn-success" (click)="video()">GUARDAR</button>
+            </div>
+        </div>
+        <!-- <div *ngIf="previsualizacion">
+          <img [src]="previsualizacion" alt="">
+        </div> -->
+    </div>
+<!-- Fin Video Pagina Principal -->
+
+<!-- Imagenes Pagina Principal -->
+    <div class="row cajaForm">
+
+        <div class="col-4">
+            <form>
+                <div class="form-group align-items-center align-content-center">
+                    <label for="" class="titulosForm col-12">Imagen Reflexiones</label>
+                </div>
+            </form>
+        </div>
+        <!-- Seleccionar archivo -->
+        <div class="col-8">
+          <div class="custom-file mt-2">
+            <form action="" method="post" enctype="multipart/form-data">
+              <input type="file" class="customfileinput" id="imagenRefelxiones"
+                name="upload" enctype="multipart/form-data" (change)=fileEventReflexiones($event)>
+              <label class="customfilelabel" for="customFile"></label>
+            </form>
+          </div>
+          <!-- Vista miniatura -->
+          <div class="" *ngIf="previsualizacionReflexiones" >
+            <div class="align-content-center align-items-center">
+              <img class="mx-auto pb-2" style="width: 50px;" [src]="previsualizacionReflexiones" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+            <form>
+                <div class="form-group align-items-center align-content-center">
+                    <label for="" class="titulosForm col-12">Imagen Despertador</label>
+                </div>
+            </form>
+        </div>
+        <!-- Seleccionar archivo -->
+        <div class="col-8">
+          <div class="custom-file mt-2">
+            <form action="" method="post" enctype="multipart/form-data">
+              <input type="file" class="customfileinput" id="imagenDespertador"
+                name="upload" enctype="multipart/form-data" (change)=fileEventDespertador($event)>
+              <label class="customfilelabel" for="customFile"></label>
+            </form>
+          </div>
+          <!-- Vista miniatura -->
+          <div class="" *ngIf="previsualizacionDespertador" >
+            <div class="align-content-center align-items-center">
+              <img class="mx-auto pb-2" style="width: 50px;" [src]="previsualizacionDespertador" alt="">
+            </div>
+          </div>
+      </div>
+
+        <div class="col-4">
+            <form>
+                <div class="form-group align-items-center align-content-center">
+                    <label for="" class="titulosForm col-12">Imagen Guia de Dios</label>
+                </div>
+            </form>
+        </div>
+        <!-- Seleccionar archivo -->
+        <div class="col-8">
+            <div class="custom-file mt-2">
+              <form action="" method="post" enctype="multipart/form-data">
+                <input type="file" class="customfileinput" id="imagenGuiaDios"
+                  name="upload" enctype="multipart/form-data" (change)=fileEventGuiaDios($event)>
+                <label class="customfilelabel" for="customFile"></label>
+              </form>
+            </div>
+            <!-- Vista miniatura -->
+            <div class="" *ngIf="previsualizacionGuiaDios" >
+              <div class="align-content-center align-items-center">
+                <img class="mx-auto pb-2" style="width: 50px;" [src]="previsualizacionGuiaDios" alt="">
+              </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin: 20px;">
+            <div class="col ml-4">
+                <button type="button" class="btn btn-success" (click)="guardarImagenes()">GUARDAR</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TExto Biblico -->
+    <div class="row cajaForm">
+
+        <div class="col-4">
+            <form>
+                <div class="form-group align-items-center align-content-center">
+                    <label for="" class="titulosForm col-12">Imagen Texto Biblico</label>
+                </div>
+            </form>
+        </div>
+        <div class="col-8">
+            <div class="custom-file mt-2">
+              <form action="" method="post" enctype="multipart/form-data">
+                <input type="file" class="customfileinput" id="imagenTextoBiblico"
+                  name="upload" enctype="multipart/form-data" (change)=fileEvent($event)>
+                <label class="customfilelabel" for="customFile"></label>
+              </form>
+            </div>
+            <div class="" *ngIf="previsualizacion" >
+              <div class="align-content-center align-items-center">
+                <img class="mx-auto pb-2" style="width: 50px;" [src]="previsualizacion" alt="">
+              </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <form>
+                <div class="form-group align-items-center align-content-center">
+                    <label for="" class="titulosForm col-12">Titulo Texto Biblico</label>
+                </div>
+            </form>
+        </div>
+        <div class="col-8">
+            <div>
+                <input type="text" class="form-control" name="" id="tituloTextoBiblico">
+            </div>
+        </div>
+
+        <div class="col-4">
+            <form>
+                <div class="form-group align-items-center align-content-center">
+                    <label for="" class="titulosForm col-12">Descripcion Texto Biblico</label>
+                </div>
+            </form>
+        </div>
+        <div class="col-8">
+            <div>
+                <textarea class="form-control" id="descripcionTextoBiblico" rows="6"></textarea>
+              </div>
+        </div>
+
+        <div class="row" style="margin: 20px;">
+            <div class="col ml-4">
+                <button type="button" class="btn btn-success" (click)="guardarTextoBiblico()">GUARDAR</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fin TExto Biblico -->
+
+    <!-- Hablemos -->
+    <div class="row cajaForm">
+        <div class="col-4">
+            <form>
+                <div class="form-group align-items-center align-content-center">
+                    <label for="" class="titulosForm col-12">Descripcion Hablemos</label>
+                </div>
+            </form>
+        </div>
+        <div class="col-8">
+            <div>
+                <textarea class="form-control" id="descripcionHablemos" rows="6"></textarea>
+              </div>
+        </div>
+
+        <div class="row" style="margin: 20px;">
+            <div class="col ml-4">
+                <button type="button" class="btn btn-success" (click)="guardarHablemos()">GUARDAR</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Apoyanos -->
+
+    <div class="row cajaForm">
+        <!-- Titulo Apoyame -->
+        <div class="col-4">
+            <form>
+                <div class="form-group align-items-center align-content-center">
+                    <label for="" class="titulosForm col-12">Titulo Apoyame</label>
+                </div>
+            </form>
+        </div>
+        <div class="col-8">
+            <div>
+                <input type="text" class="form-control" name="" id="tituloApoyame">
+            </div>
+        </div>
+        <!-- Descripcion Apoyame -->
+        <div class="col-4">
+            <form>
+                <div class="form-group align-items-center align-content-center">
+                    <label for="" class="titulosForm col-12">Descripcion Apoyanos</label>
+                </div>
+            </form>
+        </div>
+        <div class="col-8 pb-3">
+            <div>
+                <textarea class="form-control" id="descricionApoyame" rows="6"></textarea>
+              </div>
+        </div>
+        <!-- Titulo cita Biblica -->
+        <div class="col-4">
+            <form>
+                <div class="form-group align-items-center align-content-center">
+                    <label for="" class="titulosForm col-12">Titulo Cita</label>
+                </div>
+            </form>
+        </div>
+        <div class="col-8" >
+            <div>
+                <input type="text" class="form-control" name="" id="titulocita">
+            </div>
+        </div>
+        <!-- Descripcion cita -->
+        <div class="col-4">
+            <form>
+                <div class="form-group align-items-center align-content-center">
+                    <label for="" class="titulosForm col-12">Descripcion Cita</label>
+                </div>
+            </form>
+        </div>
+        <div class="col-8">
+            <div>
+                <textarea class="form-control" id="descricionCita" rows="6"></textarea>
+              </div>
+        </div>
+        <!-- Boton Guardar -->
+        <div class="row" style="margin: 20px;">
+            <div class="col ml-4">
+                <button type="button" class="btn btn-success" (click)="guardarApoyame()">GUARDAR</button>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+

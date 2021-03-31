@@ -1,0 +1,71 @@
+<div class="container mt-4">
+  <div class="row cajaForm" *ngIf="resultadoPeticion">
+      <div class="col-4">
+          <form>
+              <div class="form-group align-items-center align-content-center">
+                  <label for="" class="titulosForm col-12">Url Video Guia de Dios</label>
+              </div>
+          </form>
+      </div>
+      <div class="col-8">
+          <div>
+              <input type="text" class="form-control" name="" id="urlGuiaDios" value={{resultadoPeticion.url}}>
+          </div>
+      </div>
+
+      <div class="col-4">
+          <form>
+              <div class="form-group align-items-center align-content-center">
+                  <label for="" class="titulosForm col-12">Titulo Guia de Dios</label>
+              </div>
+          </form>
+      </div>
+      <div class="col-8">
+          <div>
+              <input type="text" class="form-control" name="" id="tituloGuiaDios" value={{resultadoPeticion.titulo}}>
+          </div>
+      </div>
+
+      <div class="col-4">
+          <form>
+              <div class="form-group align-items-center align-content-center">
+                  <label for="" class="titulosForm col-12">Descripcion Guia de Dios</label>
+              </div>
+          </form>
+      </div>
+      <div class="col-8">
+          <div>
+              <textarea class="form-control" id="DescripcionGuiaDios" rows="6">{{resultadoPeticion.descripcion}}</textarea>
+            </div>
+      </div>
+
+      <div class="col-4">
+        <form>
+            <div class="form-group align-items-center align-content-center">
+                <label for="" class="titulosForm col-12">Publicar</label>
+            </div>
+        </form>
+    </div>
+    <div class="col-8">
+      <div class="form-check pt-2" >
+        <input class="form-check-input" type="checkbox" value="" id="checkPublicacion"
+        [checked]="resultadoPeticion.publicacion" [disabled]="resultadoPeticion.publicacion" >
+        <label class="form-check-label" for="flexCheckChecked">
+
+        </label>
+      </div>
+    </div>
+
+    <div class="row" style="margin: 20px;">
+        <div class="col ml-4">
+            <button type="button" class="btn btn-success" (click)="modificar(resultadoPeticion._id)">MODIFICAR</button>
+        </div>
+        <div class="col ml-4">
+          <button type="button" class="btn btn-success" [routerLink]="['/guiaDios-admin']">Volver</button>
+        </div>
+    </div>
+
+
+
+  </div>
+</div>

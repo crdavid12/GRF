@@ -1,0 +1,84 @@
+{
+  "/api/v1/users/*":{
+      "target": "http://192.168.1.12:4500",
+      "secure": false,
+      "changeOrigin": true
+  },
+
+  "/api/v1/guiaDios/*":{
+    "target": "http://192.168.1.12:4500",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+
+  "/api/v1/reflexiones/*":{
+    "target": "http://192.168.1.12:4500",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+},
+
+  "/api/v1/despertador/*":{
+    "target": "http://192.168.1.12:4500",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+
+  "/api/v1/principal/*":{
+    "target": "http://192.168.1.12:4500",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+
+  "/api/v1/paginaPrincipal-admin/*":{
+    "target": "http://192.168.1.12:4500",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+
+  "/api/v1/hablemos/*":{
+    "target": "http://192.168.1.12:4500",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+
+  "/api/v1/textoBiblico/*":{
+    "target": "http://192.168.1.12:4500",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+
+  "/api/v1/apoyame/*":{
+    "target": "http://192.168.1.12:4500",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+
+  "/api/v1/galeriaPrincipal/*":{
+    "target": "http://192.168.1.12:4500",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+
+  "/api/v1/mail/*":{
+    "target": "http://192.168.1.12:4500",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+
+    "/paginaPrincipal/*":{
+        "target": "http://localhost:8080",
+        "secure": false,
+        "changeOrigin": true
+    }
+}
+
