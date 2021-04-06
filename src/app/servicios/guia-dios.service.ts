@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 export class GuiaDiosService {
 
   resultadoPeticion: any;
+  ruta = "https://grfbackend.herokuapp.com"
 
   constructor(private _http: HttpClient,
               private _router : Router) { }
@@ -17,7 +18,7 @@ export class GuiaDiosService {
                                       // .set("authorization", this.token);
 
     return new Promise((resolve, reject)=>{
-      this._http.get("/api/v1/guiaDios/getAll", {headers, observe:'response'})
+      this._http.get(this.ruta + "/api/v1/guiaDios/getAll", {headers, observe:'response'})
       .subscribe(data => {
         try {
           this.resultadoPeticion = data.body;
@@ -37,7 +38,7 @@ export class GuiaDiosService {
 
 
     return new Promise((resolve, reject)=>{
-      this._http.get(`/api/v1/guiaDios/getId/${id}`, {headers, observe:'response'})
+      this._http.get(this.ruta + `/api/v1/guiaDios/getId/${id}`, {headers, observe:'response'})
       .subscribe(data => {
         try {
           this.resultadoPeticion = data.body;
@@ -58,7 +59,7 @@ export class GuiaDiosService {
 
 
     return new Promise((resolve, reject)=>{
-      this._http.get("/api/v1/guiaDios/getPublicacion", {headers, observe:'response'})
+      this._http.get(this.ruta + "/api/v1/guiaDios/getPublicacion", {headers, observe:'response'})
       .subscribe(data => {
         try {
           this.resultadoPeticion = data.body;
@@ -77,7 +78,7 @@ export class GuiaDiosService {
     const headers = new HttpHeaders().set("Content-Type", "application/json")
                                       // .set("authorization", this.token);
 
-    this._http.post("/api/v1/guiaDios/create",{
+    this._http.post(this.ruta + "/api/v1/guiaDios/create",{
       url: datos.url,
       titulo: datos.titulo,
       descripcion: datos.descripcion
@@ -97,7 +98,7 @@ export class GuiaDiosService {
 
 
     return new Promise((resolve, reject)=>{
-      this._http.delete(`/api/v1/guiaDios/delete/${id}`, {headers, observe:'response'})
+      this._http.delete(this.ruta + `/api/v1/guiaDios/delete/${id}`, {headers, observe:'response'})
       .subscribe(data => {
           try {
             this.resultadoPeticion = data;
@@ -118,7 +119,7 @@ export class GuiaDiosService {
 
     return new Promise((resolve, reject)=>{
       // this._http.post(`/api/v1/guiaDios/update/${id}`, data,  {headers})
-      this._http.post(`/api/v1/guiaDios/update`, data,  {headers})
+      this._http.post(this.ruta + `/api/v1/guiaDios/update`, data,  {headers})
       .subscribe(data => {
         try {
           this.resultadoPeticion = data;

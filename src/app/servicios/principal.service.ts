@@ -14,6 +14,10 @@ export class PrincipalService {
   apoyame: any;
   galeria: any;
 
+  //Ruta Servicios
+  ruta = "https://grfbackend.herokuapp.com"
+
+
   createVideo(data){
     const headers = new HttpHeaders().set("Content-Type", "application/json")
                                       // .set("authorization", this.token);
@@ -29,7 +33,7 @@ export class PrincipalService {
     // });
 
 
-    return this._http.post("/api/v1/principal/createVideo", data);
+    return this._http.post(this.ruta + "/api/v1/principal/createVideo", data);
 
 
   }
@@ -40,7 +44,7 @@ export class PrincipalService {
 
 
     return new Promise((resolve, reject)=>{
-      this._http.get("/api/v1/principal/getVideo", {headers, observe:'response'})
+      this._http.get(this.ruta + "/api/v1/principal/getVideo", {headers, observe:'response'})
       .subscribe(data => {
         try {
           this.resultadoPeticion = data.body;
@@ -61,7 +65,7 @@ export class PrincipalService {
 
     return new Promise((resolve, reject)=>{
       // this._http.post(`/api/v1/guiaDios/update/${id}`, data,  {headers})
-      this._http.post(`/api/v1/hablemos/update`,data,  {headers})
+      this._http.post(this.ruta + `/api/v1/hablemos/update`,data,  {headers})
       .subscribe(data => {
         try {
           this.resultadoPeticion = data;
@@ -78,7 +82,7 @@ export class PrincipalService {
                                       // .set("authorization", this.token);
 
     return new Promise((resolve, reject)=>{
-      this._http.get("/api/v1/hablemos/getHablemos", {headers, observe:'response'})
+      this._http.get(this.ruta + "/api/v1/hablemos/getHablemos", {headers, observe:'response'})
       .subscribe(data => {
         try {
           this.resultadoPeticion = data.body;
@@ -97,7 +101,7 @@ export class PrincipalService {
     const headers = new HttpHeaders().set("Content-Type", "application/json")
                                       // .set("authorization", this.token);
 
-    return this._http.post("/api/v1/textoBiblico/updateImagen", imagen);
+    return this._http.post(this.ruta + "/api/v1/textoBiblico/updateImagen", imagen);
   }
 
   updateTextoBiblico(data){
@@ -106,7 +110,7 @@ export class PrincipalService {
 
     return new Promise((resolve, reject)=>{
       // this._http.post(`/api/v1/guiaDios/update/${id}`, data,  {headers})
-      this._http.post(`/api/v1/textoBiblico/update`,data,  {headers})
+      this._http.post(this.ruta + `/api/v1/textoBiblico/update`,data,  {headers})
       .subscribe(data => {
         try {
           this.resultadoPeticion = data;
@@ -123,7 +127,7 @@ export class PrincipalService {
                                       // .set("authorization", this.token);
 
     return new Promise((resolve, reject)=>{
-      this._http.get("/api/v1/textoBiblico/getimagen", {headers, observe:'response'})
+      this._http.get(this.ruta + "/api/v1/textoBiblico/getimagen", {headers, observe:'response'})
       .subscribe(data => {
         try {
           this.resultadoPeticion = data.body;
@@ -143,7 +147,7 @@ export class PrincipalService {
                                       // .set("authorization", this.token);
 
     return new Promise((resolve, reject)=>{
-      this._http.get("/api/v1/textoBiblico/get", {headers, observe:'response'})
+      this._http.get(this.ruta + "/api/v1/textoBiblico/get", {headers, observe:'response'})
       .subscribe(data => {
         try {
           this.resultadoPeticion = data.body;
@@ -164,7 +168,7 @@ export class PrincipalService {
 
     return new Promise((resolve, reject)=>{
       // this._http.post(`/api/v1/guiaDios/update/${id}`, data,  {headers})
-      this._http.post(`/api/v1/apoyame/update`,data,  {headers})
+      this._http.post(this.ruta + `/api/v1/apoyame/update`,data,  {headers})
       .subscribe(data => {
         try {
           this.resultadoPeticion = data;
@@ -181,7 +185,7 @@ export class PrincipalService {
                                       // .set("authorization", this.token);
 
     return new Promise((resolve, reject)=>{
-      this._http.get("/api/v1/apoyame/getAll", {headers, observe:'response'})
+      this._http.get(this.ruta + "/api/v1/apoyame/getAll", {headers, observe:'response'})
       .subscribe(data => {
         try {
           this.apoyame = data.body;
@@ -200,21 +204,21 @@ export class PrincipalService {
     const headers = new HttpHeaders().set("Content-Type", "application/json")
                                       // .set("authorization", this.token);
 
-    return this._http.post("/api/v1/galeriaPrincipal/updateGuiaDios", imagen);
+    return this._http.post(this.ruta + "/api/v1/galeriaPrincipal/updateGuiaDios", imagen);
   }
 
   updateDespertador(imagen){
     const headers = new HttpHeaders().set("Content-Type", "application/json")
                                       // .set("authorization", this.token);
 
-    return this._http.post("/api/v1/galeriaPrincipal/updateDespertador", imagen);
+    return this._http.post(this.ruta + "/api/v1/galeriaPrincipal/updateDespertador", imagen);
   }
 
   updateReflexiones(imagen){
     const headers = new HttpHeaders().set("Content-Type", "application/json")
                                       // .set("authorization", this.token);
 
-    return this._http.post("/api/v1/galeriaPrincipal/updateReflexiones", imagen);
+    return this._http.post(this.ruta + "/api/v1/galeriaPrincipal/updateReflexiones", imagen);
   }
 
   getGaleria(){
@@ -222,7 +226,7 @@ export class PrincipalService {
                                       // .set("authorization", this.token);
 
     return new Promise((resolve, reject)=>{
-      this._http.get("/api/v1/galeriaPrincipal/getGaleria", {headers, observe:'response'})
+      this._http.get(this.ruta + "/api/v1/galeriaPrincipal/getGaleria", {headers, observe:'response'})
       .subscribe(data => {
         try {
           this.galeria = data.body;
@@ -241,7 +245,7 @@ export class PrincipalService {
     const headers = new HttpHeaders().set("Content-Type", "application/json")
                                       // .set("authorization", this.token);
 
-    return this._http.post("/api/v1/mail/formulario", data);
+    return this._http.post(this.ruta + "/api/v1/mail/formulario", data);
   }
 
 }

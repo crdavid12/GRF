@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 export class DespertadorService {
 
   resultadoPeticion: any;
+  ruta = "https://grfbackend.herokuapp.com"
+
 
   constructor(private _http: HttpClient,
               private _router : Router) { }
@@ -20,7 +22,7 @@ export class DespertadorService {
                                       // .set("authorization", this.token);
 
     return new Promise((resolve, reject)=>{
-      this._http.get("/api/v1/despertador/getAll", {headers, observe:'response'})
+      this._http.get(this.ruta + "/api/v1/despertador/getAll", {headers, observe:'response'})
       .subscribe(data => {
         try {
           this.resultadoPeticion = data.body;
@@ -37,7 +39,7 @@ export class DespertadorService {
     const headers = new HttpHeaders().set("Content-Type", "application/json")
                                       // .set("authorization", this.token);
 
-    this._http.post("/api/v1/despertador/create",{
+    this._http.post(this.ruta + "/api/v1/despertador/create",{
       imagen: datos.imagen
     }, {headers, observe:'response'})
     .subscribe(data => {
@@ -57,7 +59,7 @@ export class DespertadorService {
 
     return new Promise((resolve, reject)=>{
       // this._http.post(`/api/v1/guiaDios/update/${id}`, data,  {headers})
-      this._http.post(`/api/v1/despertador/update`, data,  {headers})
+      this._http.post(this.ruta + `/api/v1/despertador/update`, data,  {headers})
       .subscribe(data => {
         try {
           this.resultadoPeticion = data;

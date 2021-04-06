@@ -26,6 +26,7 @@ export class UsuariosService {
       hablemos: null,
       apoyanos: null
   };
+  ruta = "https://grfbackend.herokuapp.com";
 
 
   constructor( private _http: HttpClient,
@@ -86,7 +87,7 @@ export class UsuariosService {
       // });
 
     return new Promise((resolve, reject)=>{
-      this._http.post("/api/v1/users/login",{
+      this._http.post(this.ruta + "/api/v1/users/login",{
         password: user.password,
         nombre: user.usuario
       }, {headers, observe:'response'})
@@ -126,7 +127,7 @@ export class UsuariosService {
     const headers = new HttpHeaders().set("Content-Type", "application/json")
                                       // .set("authorization", this.token);
 
-    this._http.get("/api/v1/users/get", {headers})
+    this._http.get(this.ruta + "/api/v1/users/get", {headers})
       .subscribe(data => {
         this.resultadoPeticion = data;
         console.log(data)
@@ -154,7 +155,7 @@ export class UsuariosService {
                                       .set("authorization", this.token);
 
     console.log("token post " + this.token);
-    this._http.post(`/paginaPrincipal?id=${parampost.id}$video1=${parampost.video1}`,{headers})
+    this._http.post(this.ruta + `/paginaPrincipal?id=${parampost.id}$video1=${parampost.video1}`,{headers})
     .subscribe(data => {
     this.resultadoPeticion = data;
     console.log(this.resultadoPeticion);
@@ -165,7 +166,7 @@ export class UsuariosService {
     const headers = new HttpHeaders().set("Content-Type", "application/x-www-form-urlencoded")
                                       .set("authorization", this.token);
 
-    this._http.delete("/paginaPrincipal/5", {headers})
+    this._http.delete(this.ruta + "/paginaPrincipal/5", {headers})
     .subscribe(data => {
       this.resultadoPeticion = data;
       console.log(data)
@@ -192,7 +193,7 @@ export class UsuariosService {
                                       .set("Content-Type", "application/json")
                                       .set("authorization", this.token);
 
-    this._http.put<Prueba>("/paginaPrincipal/4",paramput,{headers})
+    this._http.put<Prueba>(this.ruta + "/paginaPrincipal/4",paramput,{headers})
     .subscribe(data => {
       this.resultadoPeticion = data;
       console.log(this.resultadoPeticion);
@@ -204,7 +205,7 @@ export class UsuariosService {
                                       // .set("authorization", this.token);
 
     return new Promise((resolve, reject)=>{
-      this._http.get("/api/v1/guiaDios/getAll", {headers, observe:'response'})
+      this._http.get(this.ruta + "/api/v1/guiaDios/getAll", {headers, observe:'response'})
       .subscribe(data => {
         try {
           this.resultadoPeticion = data.body;
@@ -224,7 +225,7 @@ export class UsuariosService {
 
 
     return new Promise((resolve, reject)=>{
-      this._http.get(`/api/v1/guiaDios/getId/${id}`, {headers, observe:'response'})
+      this._http.get(this.ruta + `/api/v1/guiaDios/getId/${id}`, {headers, observe:'response'})
       .subscribe(data => {
         try {
           this.resultadoPeticion = data.body;
@@ -245,7 +246,7 @@ export class UsuariosService {
 
 
     return new Promise((resolve, reject)=>{
-      this._http.get("/api/v1/guiaDios/getPublicacion", {headers, observe:'response'})
+      this._http.get(this.ruta + "/api/v1/guiaDios/getPublicacion", {headers, observe:'response'})
       .subscribe(data => {
         try {
           this.resultadoPeticion = data.body;
@@ -264,7 +265,7 @@ export class UsuariosService {
     const headers = new HttpHeaders().set("Content-Type", "application/json")
                                       // .set("authorization", this.token);
 
-    this._http.post("/api/v1/guiaDios/create",{
+    this._http.post(this.ruta + "/api/v1/guiaDios/create",{
       url: datos.url,
       titulo: datos.titulo,
       descripcion: datos.descripcion
@@ -284,7 +285,7 @@ export class UsuariosService {
 
 
     return new Promise((resolve, reject)=>{
-      this._http.delete(`/api/v1/guiaDios/delete/${id}`, {headers, observe:'response'})
+      this._http.delete(this.ruta + `/api/v1/guiaDios/delete/${id}`, {headers, observe:'response'})
       .subscribe(data => {
           try {
             this.resultadoPeticion = data;
@@ -305,7 +306,7 @@ export class UsuariosService {
 
     return new Promise((resolve, reject)=>{
       // this._http.post(`/api/v1/guiaDios/update/${id}`, data,  {headers})
-      this._http.post(`/api/v1/guiaDios/update`, data,  {headers})
+      this._http.post(this.ruta + `/api/v1/guiaDios/update`, data,  {headers})
       .subscribe(data => {
         try {
           this.resultadoPeticion = data;

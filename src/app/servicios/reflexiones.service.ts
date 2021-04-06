@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 export class ReflexionesService {
 
   resultadoPeticion: any;
+  ruta = "https://grfbackend.herokuapp.com";
+
 
   constructor(private _http: HttpClient,
               private _router : Router) { }
@@ -17,7 +19,7 @@ export class ReflexionesService {
                                       // .set("authorization", this.token);
 
     return new Promise((resolve, reject)=>{
-      this._http.get("/api/v1/reflexiones/getAll", {headers, observe:'response'})
+      this._http.get(this.ruta + "/api/v1/reflexiones/getAll", {headers, observe:'response'})
       .subscribe(data => {
         try {
           this.resultadoPeticion = data.body;
@@ -37,7 +39,7 @@ export class ReflexionesService {
 
 
     return new Promise((resolve, reject)=>{
-      this._http.get(`/api/v1/reflexiones/getId/${id}`, {headers, observe:'response'})
+      this._http.get(this.ruta + `/api/v1/reflexiones/getId/${id}`, {headers, observe:'response'})
       .subscribe(data => {
         try {
           this.resultadoPeticion = data.body;
@@ -58,7 +60,7 @@ export class ReflexionesService {
 
 
     return new Promise((resolve, reject)=>{
-      this._http.get("/api/v1/reflexiones/getPublicacion", {headers, observe:'response'})
+      this._http.get(this.ruta + "/api/v1/reflexiones/getPublicacion", {headers, observe:'response'})
       .subscribe(data => {
         try {
           this.resultadoPeticion = data.body;
@@ -77,7 +79,7 @@ export class ReflexionesService {
     const headers = new HttpHeaders().set("Content-Type", "application/json")
                                       // .set("authorization", this.token);
 
-    this._http.post("/api/v1/reflexiones/create",{
+    this._http.post(this.ruta + "/api/v1/reflexiones/create",{
       url: datos.url,
       titulo: datos.titulo,
       descripcion: datos.descripcion
@@ -97,7 +99,7 @@ export class ReflexionesService {
 
 
     return new Promise((resolve, reject)=>{
-      this._http.delete(`/api/v1/reflexiones/delete/${id}`, {headers, observe:'response'})
+      this._http.delete(this.ruta + `/api/v1/reflexiones/delete/${id}`, {headers, observe:'response'})
       .subscribe(data => {
           try {
             this.resultadoPeticion = data;
@@ -120,7 +122,7 @@ export class ReflexionesService {
 
     return new Promise((resolve, reject)=>{
       // this._http.post(`/api/v1/guiaDios/update/${id}`, data,  {headers})
-      this._http.post(`/api/v1/reflexiones/update`, data,  {headers})
+      this._http.post(this.ruta + `/api/v1/reflexiones/update`, data,  {headers})
       .subscribe(data => {
         try {
           this.resultadoPeticion = data;
