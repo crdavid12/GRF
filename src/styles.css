@@ -162,6 +162,10 @@ nav ul li a:focus{
     text-decoration: underline;
 }
 
+#carouselExampleFade{
+  min-height: 260px;
+}
+
 /* Formularios */
 .titulosForm{
     color: #fff;
