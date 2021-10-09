@@ -76,6 +76,7 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  //Metodo que retorna el carrousel de a galeria(inhabilitado) se queman los datos en el front
   async getGaleria(){
     await this._principalService.getGaleria().then(()=>{
       this.galeria = this._principalService.galeria;
